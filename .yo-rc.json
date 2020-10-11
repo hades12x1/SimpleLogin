@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "kma.chuyenns"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "SimpleLogin",
+    "packageName": "kma.chuyenns",
+    "packageFolder": "kma/chuyenns",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTJmYjYwNDZiNmJhYTUyMzljOTI4OGQ5ZGQxNWRjYmE2ZDg2ODFlMjE4ODkxNTRmZjQ4NGM2ZmUzMDQ1MWE4MTdiNGU4MTA1ZjY0MmZiOTY5YzBmNzdiZWVhMzkzMDY1YzM1ODkxOTBjMTQ0YWYxNGU5NjFhMjY3MGE0ZGJiMTA=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1602078894321,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
