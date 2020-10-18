@@ -32,6 +32,10 @@ public class UserDTO {
     @Size(min = 5, max = 254)
     private String email;
 
+    private String phone;
+
+    private String address;
+
     @Size(max = 256)
     private String imageUrl;
 
@@ -70,6 +74,8 @@ public class UserDTO {
         this.authorities = user.getAuthorities().stream()
             .map(Authority::getName)
             .collect(Collectors.toSet());
+        this.address = user.getAddress();
+        this.phone = user.getPhone();
     }
 
     public Long getId() {
@@ -174,6 +180,22 @@ public class UserDTO {
 
     public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     // prettier-ignore

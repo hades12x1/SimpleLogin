@@ -56,6 +56,12 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(length = 254, unique = true)
     private String email;
 
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "address")
+    private String address;
+
     @NotNull
     @Column(nullable = false)
     private boolean activated = false;
@@ -196,6 +202,22 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.authorities = authorities;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -212,18 +234,18 @@ public class User extends AbstractAuditingEntity implements Serializable {
         return 31;
     }
 
-    // prettier-ignore
     @Override
     public String toString() {
         return "User{" +
-            "login='" + login + '\'' +
+            "id=" + id +
+            ", login='" + login + '\'' +
+            ", password='" + password + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
             ", email='" + email + '\'' +
-            ", imageUrl='" + imageUrl + '\'' +
-            ", activated='" + activated + '\'' +
-            ", langKey='" + langKey + '\'' +
-            ", activationKey='" + activationKey + '\'' +
-            "}";
+            ", phone='" + phone + '\'' +
+            ", address='" + address + '\'' +
+            ", activated=" + activated +
+            '}';
     }
 }

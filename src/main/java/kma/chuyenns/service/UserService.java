@@ -105,6 +105,9 @@ public class UserService {
         }
         newUser.setImageUrl(userDTO.getImageUrl());
         newUser.setLangKey(userDTO.getLangKey());
+        newUser.setAddress(userDTO.getAddress());
+        newUser.setPhone(userDTO.getPhone());
+
         // new user is not active
         newUser.setActivated(false);
         // new user gets registration key

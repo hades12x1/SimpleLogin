@@ -21,7 +21,7 @@ export const RegisterPage = (props: IRegisterProps) => {
   );
 
   const handleValidSubmit = (event, values) => {
-    props.handleRegister(values.username, values.email, values.firstPassword);
+    props.handleRegister(values.username, values.email, values.firstPassword, "en", values.phone, values.address);
     event.preventDefault();
   };
 
@@ -63,6 +63,16 @@ export const RegisterPage = (props: IRegisterProps) => {
               }}
             />
             <AvField
+              name="phone"
+              label="Phone"
+              placeholder={'Phone'}
+            />
+            <AvField
+              name="address"
+              label="Address"
+              placeholder={'Address'}
+            />
+            <AvField
               name="firstPassword"
               label="New password"
               placeholder={'New password'}
@@ -70,8 +80,8 @@ export const RegisterPage = (props: IRegisterProps) => {
               onChange={updatePassword}
               validate={{
                 required: { value: true, errorMessage: 'Your password is required.' },
-                minLength: { value: 4, errorMessage: 'Your password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your password cannot be longer than 50 characters.' },
+                minLength: { value: 8, errorMessage: 'Your password is required to be at least 8 characters.' },
+                maxLength: { value: 20, errorMessage: 'Your password cannot be longer than 20 characters.' },
               }}
             />
             <PasswordStrengthBar password={password} />
@@ -82,8 +92,8 @@ export const RegisterPage = (props: IRegisterProps) => {
               type="password"
               validate={{
                 required: { value: true, errorMessage: 'Your confirmation password is required.' },
-                minLength: { value: 4, errorMessage: 'Your confirmation password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your confirmation password cannot be longer than 50 characters.' },
+                minLength: { value: 8, errorMessage: 'Your confirmation password is required to be at least 8 characters.' },
+                maxLength: { value: 20, errorMessage: 'Your confirmation password cannot be longer than 20 characters.' },
                 match: { value: 'firstPassword', errorMessage: 'The password and its confirmation do not match!' },
               }}
             />

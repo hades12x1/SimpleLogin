@@ -17,26 +17,20 @@ export const Home = (props: IHomeProp) => {
     <Row>
       <Col md="9">
         <h2>Welcome, Chuyenns!</h2>
-        <p className="lead">This is your homepage</p>
+        <p className="lead">Thông tin sinh viên</p>
         {account && account.login ? (
           <div>
-            <Alert color="success">You are logged in as user {account.login}.</Alert>
+            <Alert color="success">User đăng nhập: {account.login}.</Alert>
           </div>
         ) : (
           <div>
             <Alert color="warning">
-              If you want to
-              <Link to="/login" className="alert-link">
-                {' '}
-                sign in
-              </Link>
-              , you can try the default accounts:
-              <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-              <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
+              <br />- Số thứ tự sinh viên: 02.
+              <br />- Họ và tên: Nguyễn Sĩ Chuyền.
+              <br />- Mã số sinh viên: AT130309
             </Alert>
 
             <Alert color="warning">
-              You do not have an account yet?&nbsp;
               <Link to="/account/register" className="alert-link">
                 Register a new account
               </Link>
@@ -45,7 +39,7 @@ export const Home = (props: IHomeProp) => {
         )}
       </Col>
       <Col md="3" className="pad">
-        <span className="hipster rounded" />
+        <img style={{"height" : "100%", "width" : "100%"}} src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.15752-9/121958132_1001018693706568_1558035180601945053_n.jpg?_nc_cat=104&amp;_nc_sid=ae9488&amp;_nc_ohc=tLi6_0OSX-oAX_qvTpM&amp;_nc_ht=scontent-hkg4-2.xx&amp;oh=ecdeae6821e3d6e460eb1cf7b0a25e1f&amp;oe=5FB33F66"/>
       </Col>
     </Row>
   );
