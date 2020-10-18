@@ -32,7 +32,7 @@ export const Home = (props: IHomeProp) => {
 
             <Alert color="warning">
               <Link to="/account/register" className="alert-link">
-                Register a new account
+                Đăng ký tài khoản
               </Link>
             </Alert>
           </div>
